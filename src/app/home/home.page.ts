@@ -8,6 +8,7 @@ import maskitoOptions from './mask';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  a='';
 
   readonly options = maskitoOptions;
 
@@ -47,5 +48,23 @@ export class HomePage {
     ],
   };
 
+  readonly numberMask: MaskitoOptions = {
+    mask: /^\d+(,\d*)?$/,
+    preprocessors: [
+      ({ elementState, data }, actionType) => {
+        const { value, selection } = elementState;
 
+        return {
+          elementState: {
+            selection,
+            value: value.replace('.', ','),
+          },
+          data: data.replace('.', ','),
+        };
+      },
+    ],
+  };
+setValue(){
+  this.a = '123'
+}
 }

@@ -15,7 +15,8 @@ import { MaskitoModule } from '@maskito/angular';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    MaskitoModule
+    MaskitoModule,
+    FormsModule 
   ],
   declarations: [HomePage]
 })

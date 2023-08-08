@@ -7,8 +7,9 @@
 </ion-header>
 
 <ion-content>
+  <ion-button expand="block" (click)="setValue()">Set Value</ion-button>
   <ion-item>
-    <ion-input label="Number" [maskito]="digitsOnlyMask" [maskitoElement]="predicate" />
+    <ion-input [(ngModel)]="a" label="Cool Number" [maskito]="digitsOnlyMask" [maskitoElement]="predicate" />
   </ion-item>
   <ion-item>
     <ion-input label="Time" [maskito]="timeMask" [maskitoElement]="predicate" />
@@ -24,5 +25,8 @@
   </ion-item>
   <ion-item>
     <ion-input label="CVV" [maskito]="options" [maskitoElement]="predicate" />
+  </ion-item>
+  <ion-item>
+    <ion-input label="Number" [maskito]="numberMask" [maskitoElement]="predicate" />
   </ion-item>
 </ion-content>
